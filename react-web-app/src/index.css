@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Mono:wght@200;400&family=Roboto:wght@900&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  width: 96vw;
+  height: 5em;
+  padding: 0em 2vw;
+  
+  background-color: whitesmoke;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  transition: top 0.3s;
+}
+
+.navbarIcon{
+  width: 8em;
+}
+
+.navbarCategories {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navCatButton {
+  position: relative;
+  width: 5em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navCatButton:hover {
+  transition: 0.3s ease-in-out;
+  font-weight: 700;
+}
+
+.navCatButton:hover::after{
+  content: '';
+  position: absolute;
+  bottom: 0em;
+  width: 5em;
+  height: 0.2em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  animation: navCatBtn 0.3s ease-in-out;
+}
+
+@keyframes navCatBtn {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 5em;
+  }
+}
+
+.navbarOptions {
+  display: flex;
+  width: 34%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navInpWrapper {
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 2em;
+  animation: navInput 5s ease-in-out infinite;
+}
+
+@keyframes navInput {
+  0%{
+    background-color: #fff;
+  }
+  50%{
+    background-color: whitesmoke;
+  }
+  100%{
+    background-color: #fff;
+  }
+}
+
+.navInput {
+  animation: navInput 5s ease-in-out infinite;
+  border: none;
+  outline: none;
+  color: gray;
+}
+
+
+/* NEW ARRIVALS */
+
+.discounted {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  /* overflow-x: hidden; */
+}
+
+.discountedTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  width: 90vw;
+  flex-direction: column;
+  margin-bottom: 2em;
+  border-bottom: 0.3em solid gray;
+  position: relative;
+}
+
+.discountedTitle > p {
+  font-family: 'Roboto';
+}
+
+.discountedCards{
+  width: 94vw;
+  margin: 3em;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.discountedCards::-webkit-scrollbar{
+  display: none;
+}
+
+.dispCard{
+  width: 22vw;
+  min-width: 20em;
+  aspect-ratio: 0.7;
+  overflow-x: hidden;
+  margin: 1em;
+}
+
+.dispCard ::-webkit-scrollbar{
+  display: none;
+}
+
+.dispCardImgWrapper {
+  width: 100%;
+  height: 80%;
+}
+
+.dispCardImg ::-webkit-scrollbar{
+  display: none;
+}
+
+.dispCardImg {
+  display: block;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.dispCardInfo {
+  width: 100%;
+  height: 15%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dispCardInfo ::-webkit-scrollbar{
+  display: none;
+}
+
+.dispCardTitle {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dispCardPrice {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dispCardPrice ::-webkit-scrollbar{
+  display: none;
+}
+
+.dispCardPriceStrike > s {
+  font-size: 1.5em;
+  color: gray;
+}
+
+.bolderPrice {
+  font-weight: 700;
+  font-family: 'Roboto';
+}
+
+.arrPdctName {
+  font-weight: 800;
+  font-size: 1.5em;
+  transition: 0.3s ease-in;
+  font-family: 'Roboto';
+}
+
+.arrCardInfo:hover .arrPdctName {
+  display: none;
+  transition: 0.3s ease-in;
+
+}
+
+.arrPdctPrice {
+  display: none;
+  font-family: 'Roboto';
+  transition: 0.3s ease-in;
+}
+
+.arrCardInfo:hover .arrPdctPrice {
+  color: white;
+  font-weight: 800;
+  display: contents;
+  font-size: 1.5em;
+  transition: 0.3s ease-in;
+}
+
+.arrivalsCards::-webkit-scrollbar {
+  display: none;
+}
+
+.productInfo {
+  box-shadow: -0.1em 1em 1em gray;
+}
+
+.pdctDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: 'Roboto';
+}
